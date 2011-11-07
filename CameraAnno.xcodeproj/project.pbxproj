@@ -37,20 +37,20 @@
 		415133031467F3850035356E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		415133051467F3850035356E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		415133071467F3850035356E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		4151330B1467F3850035356E /* CameraAnno-Info.plist */ = {isa = PBXFileReference; path = "CameraAnno-Info.plist"; sourceTree = "<group>"; };
+		4151330B1467F3850035356E /* CameraAnno-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CameraAnno-Info.plist"; sourceTree = "<group>"; };
 		4151330D1467F3850035356E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4151330F1467F3850035356E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		415133111467F3850035356E /* CameraAnno-Prefix.pch */ = {isa = PBXFileReference; path = "CameraAnno-Prefix.pch"; sourceTree = "<group>"; };
-		415133121467F3850035356E /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		415133111467F3850035356E /* CameraAnno-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CameraAnno-Prefix.pch"; sourceTree = "<group>"; };
+		415133121467F3850035356E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		415133131467F3850035356E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		415133151467F3850035356E /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		415133151467F3850035356E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		415133161467F3850035356E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		415133191467F3850035356E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		415133201467F3850035356E /* CameraAnnoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CameraAnnoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		415133211467F3850035356E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		415133291467F3850035356E /* CameraAnnoTests-Info.plist */ = {isa = PBXFileReference; path = "CameraAnnoTests-Info.plist"; sourceTree = "<group>"; };
+		415133291467F3850035356E /* CameraAnnoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CameraAnnoTests-Info.plist"; sourceTree = "<group>"; };
 		4151332B1467F3850035356E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4151332D1467F3850035356E /* CameraAnnoTests.h */ = {isa = PBXFileReference; path = CameraAnnoTests.h; sourceTree = "<group>"; };
+		4151332D1467F3850035356E /* CameraAnnoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraAnnoTests.h; sourceTree = "<group>"; };
 		4151332E1467F3850035356E /* CameraAnnoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraAnnoTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

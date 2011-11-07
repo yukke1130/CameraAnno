@@ -13,6 +13,10 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+// @property *window のプロパティを定義
+// [strong, nonatomic] 
+// strong = ''
+// nonatomic
 
 @property (strong, nonatomic) ViewController *viewController;
 
