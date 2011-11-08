@@ -9,14 +9,17 @@
 #import "AppDelegate.h"
 
 #import "ViewController.h"
+#import "Tab1Controller.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
+@synthesize tab1Controller = _tab1Controller;
 
 - (void)dealloc
 {
+    [tabBar release]; // タブ・バーのメモリを開放
     [_window release];
     [_viewController release];
     [super dealloc];
@@ -30,10 +33,86 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     // ViewControllerにオブジェクトが渡される
-    self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
-    self.window.rootViewController = self.viewController;
+//    self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
+//    self.window.rootViewController = self.viewController;
+//    [self.window makeKeyAndVisible];
+    
+    
+//    UITabBarController *tbc =[[UITabBarController alloc] init];
+//    UIView *view1 = [[UIView alloc] init];
+//    UIView *view2 = [[UIView alloc] init];
+//    NSArray *views = [NSArray arrayWithObjects:view1, view2, nil];
+//    [tbc setViewControllers:views animated:NO];
+//    [self.window addSubview:tbc.view];    
+//    [self.window makeKeyAndVisible];
+    
+    
+    // １番目のViewControllerを作ってタブのタイトルとアイコンを指定
+    Tab1Controller *view1 = [[[Tab1Controller alloc] init] autorelease];
+    view1.title = @"一番";
+    view1.tabBarItem = [[[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFeatured tag:0] autorelease];
+    
+    // １番目のViewControllerにテキストを加える
+    UITextView *text1 = [[[UITextView alloc] initWithFrame:CGRectMake(10, 100, 200, 50)] autorelease];
+    text1.text = @"これはView 1です";
+    text1.font = [UIFont systemFontOfSize:30];
+    [view1.view addSubview:text1];
+    
+
+    // カメラのボタンを作ります
+    UIViewController *cameraView = [[[ViewController alloc] init] autorelease];
+    cameraView.tabBarItem = [[[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemTopRated tag:1] autorelease];
+
+    
+        
+    
+    // 2番目のViewControllerを作ってタブのタイトルとアイコンを指定
+    UIViewController *view2 = [[[ViewController alloc] init] autorelease];
+    view2.title = @"二番";
+    view2.tabBarItem = [[[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemTopRated tag:2] autorelease];
+    
+    // 2番目のViewControllerにテキストを加える
+    UITextView *text2 = [[[UITextView alloc] initWithFrame:CGRectMake(10, 100, 200, 50)] autorelease];
+    text2.text = @"View 2はこれです";
+    text2.font = [UIFont systemFontOfSize:30];
+    [view2.view addSubview:text2];
+    
+    // タブ・バーを作って二つのViewControllerを付け加える
+    tabBar = [[UITabBarController alloc] init];
+    tabBar.viewControllers = [NSArray arrayWithObjects:view1, cameraView, view2, nil];
+    // delegete を自分自身に設定してあげると tabBarControllerが呼ばれる
+    tabBar.delegate = self;
+    
+        
+    
+    // タブ・バーをメインのウインドウに付け加える
+    [self.window addSubview:tabBar.view];
     [self.window makeKeyAndVisible];
+
     return YES;
+}
+
+- (void) tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    
+    if (tabBarController.selectedIndex == 1) {
+        NSLog(@"tab click");
+        
+        UIImagePickerController *ipc = [[[UIImagePickerController alloc] init] autorelease];  // 生成
+        ipc.delegate = self;  // デリゲートを自分自身に設定
+        // ipc.sourceType = UIImagePickerControllerSourceTypeCamera;  // 画像の取得先をカメラに設定
+        ipc.sourceType = UIImagePickerControllerSourceTypePhotoLibrary; // 画像の取得先ギャラリー
+        
+        ipc.allowsEditing = YES;  // 画像取得後編集する
+        [viewController presentModalViewController:ipc animated:YES];
+        // モーダルビューとしてカメラ画面を呼び出す
+    }
+
+    
+}
+
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
+    NSLog(@"pic choosed");
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

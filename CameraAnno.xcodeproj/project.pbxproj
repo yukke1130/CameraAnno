@@ -20,6 +20,8 @@
 		415133241467F3850035356E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 415133051467F3850035356E /* Foundation.framework */; };
 		4151332C1467F3850035356E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4151332A1467F3850035356E /* InfoPlist.strings */; };
 		4151332F1467F3850035356E /* CameraAnnoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4151332E1467F3850035356E /* CameraAnnoTests.m */; };
+		4169356914694C2D004C86F6 /* Tab1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 4169356714694C2D004C86F6 /* Tab1Controller.m */; };
+		4169356A14694C2D004C86F6 /* Tab1Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4169356814694C2D004C86F6 /* Tab1Controller.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,9 @@
 		4151332B1467F3850035356E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4151332D1467F3850035356E /* CameraAnnoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraAnnoTests.h; sourceTree = "<group>"; };
 		4151332E1467F3850035356E /* CameraAnnoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraAnnoTests.m; sourceTree = "<group>"; };
+		4169356614694C2D004C86F6 /* Tab1Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tab1Controller.h; sourceTree = "<group>"; };
+		4169356714694C2D004C86F6 /* Tab1Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tab1Controller.m; sourceTree = "<group>"; };
+		4169356814694C2D004C86F6 /* Tab1Controller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Tab1Controller.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +122,9 @@
 				415133161467F3850035356E /* ViewController.m */,
 				415133181467F3850035356E /* ViewController.xib */,
 				4151330A1467F3850035356E /* Supporting Files */,
+				4169356614694C2D004C86F6 /* Tab1Controller.h */,
+				4169356714694C2D004C86F6 /* Tab1Controller.m */,
+				4169356814694C2D004C86F6 /* Tab1Controller.xib */,
 			);
 			path = CameraAnno;
 			sourceTree = "<group>";
@@ -223,6 +231,7 @@
 			files = (
 				4151330E1467F3850035356E /* InfoPlist.strings in Resources */,
 				4151331A1467F3850035356E /* ViewController.xib in Resources */,
+				4169356A14694C2D004C86F6 /* Tab1Controller.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +269,7 @@
 				415133101467F3850035356E /* main.m in Sources */,
 				415133141467F3850035356E /* AppDelegate.m in Sources */,
 				415133171467F3850035356E /* ViewController.m in Sources */,
+				4169356914694C2D004C86F6 /* Tab1Controller.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +437,7 @@
 				415133341467F3850035356E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		415133351467F3850035356E /* Build configuration list for PBXNativeTarget "CameraAnnoTests" */ = {
 			isa = XCConfigurationList;
@@ -435,6 +446,7 @@
 				415133371467F3850035356E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

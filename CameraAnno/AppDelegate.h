@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @class ViewController;
+@class Tab1Controller;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
+    UITabBarController *tabBar; // タブ・バーの宣言
+}
 @property (strong, nonatomic) UIWindow *window;
 // @property *window のプロパティを定義
 // [strong, nonatomic] 
@@ -19,5 +21,7 @@
 // nonatomic
 
 @property (strong, nonatomic) ViewController *viewController;
+@property (strong, nonatomic) Tab1Controller *tab1Controller;
+
 
 @end

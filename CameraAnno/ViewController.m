@@ -38,7 +38,7 @@
     [btn setTitle:@"ぽち" forState:UIControlStateHighlighted];
     [btn setTitle:@"押せません" forState:UIControlStateDisabled];
     
-    
+        
     // ボタンがタッチダウンされた時にhogeメソッドを呼び出す
     [btn addTarget:self action:@selector(hoge:) forControlEvents:UIControlEventTouchDown];
     
